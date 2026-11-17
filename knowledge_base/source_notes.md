@@ -1,0 +1,2 @@
+# Reference Sources
+The prototype knowledge base is intentionally short and paraphrased for an academic demonstration. It is informed by NIST Cybersecurity Framework 2.0, NIST SP 800-161 Rev. 1 (Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations), and NIST SP 1305 (CSF 2.0 Quick-Start Guide for C-SCRM). The project should link to the official NIST publications in the final scholarly report.

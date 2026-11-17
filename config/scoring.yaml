@@ -1,0 +1,25 @@
+model_name: "ProcureShield Deterministic Supplier Risk Model v1.1"
+version: "1.1"
+score_range: [0, 100]
+tiers:
+  Low: [0, 29.99]
+  Medium: [30, 54.99]
+  High: [55, 74.99]
+  Critical: [75, 100]
+domains:
+  security_controls:
+    label: "Security Controls"
+    weight: 0.35
+  system_data_exposure:
+    label: "System & Data Exposure"
+    weight: 0.20
+  business_criticality:
+    label: "Business Criticality"
+    weight: 0.20
+  operational_resilience:
+    label: "Operational Resilience"
+    weight: 0.15
+  third_fourth_party:
+    label: "Third / Fourth-Party Risk"
+    weight: 0.10
+unknown_risk_default: 60

@@ -1,0 +1,28 @@
+{
+  "name": "ProcureShield High-Critical Follow-up",
+  "nodes": [
+    {
+      "parameters": {"httpMethod": "POST", "path": "procureshield-risk", "responseMode": "onReceived", "options": {}},
+      "id": "webhook-node", "name": "ProcureShield Webhook", "type": "n8n-nodes-base.webhook", "typeVersion": 2, "position": [260, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {"options": {"caseSensitive": true}, "conditions": [
+          {"leftValue": "={{ $json.body.tier }}", "rightValue": "High", "operator": {"type": "string", "operation": "equals"}},
+          {"leftValue": "={{ $json.body.tier }}", "rightValue": "Critical", "operator": {"type": "string", "operation": "equals"}}
+        ], "combinator": "or"}
+      },
+      "id": "if-node", "name": "High or Critical?", "type": "n8n-nodes-base.if", "typeVersion": 2, "position": [500, 300]
+    },
+    {
+      "parameters": {"jsCode": "const x = $json.body || $json; return [{json:{subject:`ProcureShield ${x.tier} supplier risk: ${x.supplier_name}`, supplier:x.supplier_name, score:x.overall_score, tier:x.tier, brief:x.brief, top_drivers:x.top_drivers, action:'Open remediation ticket / notify owner / schedule reassessment'}}];"},
+      "id": "code-node", "name": "Build Follow-up Payload", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [740, 220]
+    }
+  ],
+  "connections": {
+    "ProcureShield Webhook": {"main": [[{"node": "High or Critical?", "type": "main", "index": 0}]]},
+    "High or Critical?": {"main": [[{"node": "Build Follow-up Payload", "type": "main", "index": 0}], []]}
+  },
+  "active": false,
+  "settings": {}
+}

@@ -1,0 +1,17 @@
+supplier_id,supplier_name,industry,expected_tier,mfa_enabled,patch_sla_days,encryption_status,backup_recovery,incident_response_plan,system_access_level,data_sensitivity,erp_api_connected,remote_access,supplier_criticality,sole_source,active_skus,process_dependency,lead_time_days,alternate_source_status,logistics_concentration,inventory_buffer_days,international_freight_dependency,security_documentation_status,breach_notification_hours,fourth_party_visibility,security_clause_contract
+L01,Aldercrest Components,Components,Low,yes,7,full,tested,yes,none,public,no,no,low,no,6,low,10,available,low,75,no,current,24,high,yes
+L02,Veridian Supply Works,SaaS,Low,yes,14,full,tested,yes,limited,internal,no,no,low,no,12,low,18,available,low,60,no,current,24,high,yes
+L03,Bluehaven Industrial,Logistics,Low,yes,21,full,tested,yes,limited,internal,no,yes,medium,no,18,medium,20,available,medium,45,no,current,48,medium,yes
+L04,Cedarline Materials,Electronics,Low,yes,30,full,exists_not_tested,yes,limited,internal,no,yes,medium,no,25,medium,25,available,medium,35,no,partial,48,medium,yes
+M01,Nexora Components,Components,Medium,yes,30,partial,exists_not_tested,yes,standard,confidential,no,yes,medium,no,40,medium,35,partial,medium,25,yes,partial,72,medium,partial
+M02,Meridian Forge Systems,SaaS,Medium,yes,45,partial,exists_not_tested,yes,standard,confidential,yes,yes,medium,no,55,medium,40,partial,medium,22,yes,partial,72,medium,partial
+M03,Orion Vale Logistics,Logistics,Medium,yes,45,partial,exists_not_tested,yes,standard,confidential,yes,yes,high,no,70,high,45,partial,high,20,yes,partial,72,low,partial
+M04,SummitArc Manufacturing,Electronics,Medium,no,45,partial,tested,yes,standard,confidential,no,yes,medium,no,45,high,35,partial,medium,30,yes,partial,72,medium,partial
+H01,Kestrel Ridge Technologies,Components,High,no,60,partial,exists_not_tested,yes,standard,regulated,yes,yes,high,yes,120,high,55,partial,high,12,yes,outdated,96,low,partial
+H02,Ironwood Process Systems,SaaS,High,no,75,partial,exists_not_tested,yes,privileged,confidential,yes,yes,high,yes,140,high,60,partial,high,10,yes,outdated,96,low,partial
+H03,Clearpath Industrial Partners,Logistics,High,yes,90,none,exists_not_tested,no,standard,regulated,yes,yes,high,yes,180,high,70,partial,high,10,yes,outdated,120,low,partial
+H04,VectorHarbor Components,Electronics,High,no,60,partial,none,yes,standard,confidential,yes,yes,critical,yes,160,critical,70,partial,high,8,yes,outdated,120,low,partial
+C01,Aureline Manufacturing,Components,Critical,no,90,none,none,no,privileged,regulated,yes,yes,critical,yes,220,critical,90,none,critical,5,yes,missing,240,none,no
+C02,Cobalt Bridge Systems,SaaS,Critical,no,90,partial,none,no,privileged,regulated,yes,yes,critical,yes,200,critical,75,none,critical,7,yes,missing,168,none,no
+C03,Granite Axis Industrial,Logistics,Critical,no,75,none,none,no,privileged,confidential,yes,yes,critical,yes,175,critical,80,none,high,6,yes,missing,168,none,no
+C04,Novacrest Supply Group,Electronics,Critical,no,90,none,exists_not_tested,no,privileged,regulated,yes,yes,critical,yes,250,critical,95,none,critical,3,yes,outdated,240,none,no
